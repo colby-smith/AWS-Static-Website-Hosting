@@ -2,6 +2,8 @@
 
 ## 📘 Overview
 
+Notes - not yet deployed.
+
 A brief description of the project.
 
 ## 🎯 Purpose of This Repository

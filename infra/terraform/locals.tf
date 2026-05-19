@@ -1,8 +1,9 @@
 locals {
   common_tags = {
-    Project     = "AWS-Static-Website-Hosting"
+    Project     = "personal-static-website"
     Application = "colby-smith-labs"
     Environment = "production"
+    repository  = "AWS-Static-Website-Hosting"
     ManagedBy   = "terraform"
   }
 }
