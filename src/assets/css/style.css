@@ -387,8 +387,23 @@ span.single-timeline-horizontal.spacial-horizontal-line {
     border-bottom: 1px solid #e5ebf2;
 }
 
-.single-skill-content h4 {
-    margin: 22px 0 12px;
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 30px;
+    row-gap: 24px;
+    align-items: start;
+}
+
+.skill-category {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-category h4 {
+    margin: 0 0 12px;
+    min-height: 20px;
+    line-height: 20px;
     font-size: 16px;
     font-weight: 600;
     color: #43485c;
@@ -398,7 +413,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 24px;
+    margin: 0;
 }
 
 .skill-item {
