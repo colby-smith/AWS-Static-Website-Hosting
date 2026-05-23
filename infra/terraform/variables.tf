@@ -9,6 +9,7 @@ variable "environment_suffix" {
   type        = string
   default     = "pr"
 }
+
 variable "domain_name" {
   description = "Primary domain name for the static website."
   type        = string
@@ -20,6 +21,7 @@ variable "www_domain_name" {
   type        = string
   default     = "www.colby-smith-labs.com"
 }
+
 variable "aws_region" {
   description = "Primary AWS region for regional resources."
   type        = string
@@ -36,4 +38,22 @@ variable "error_document" {
   description = "Default error document for the static website."
   type        = string
   default     = "404.html"
+}
+
+variable "github_repository" {
+  description = "GitHub repository in owner/repository format."
+  type        = string
+  default     = "colby-smith/AWS-Static-Website-Hosting"
+}
+
+variable "github_branch" {
+  description = "GitHub branch used for website content deployments."
+  type        = string
+  default     = "main"
+}
+
+variable "website_source_path" {
+  description = "Repository path containing the static website content."
+  type        = string
+  default     = "src"
 }

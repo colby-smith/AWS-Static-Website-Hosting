@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "checking aws cli version"
+      - aws --version
+
+  pre_build:
+    commands:
+      - echo "validating static website content"
+      - test -d "${WEBSITE_SOURCE_PATH}"
+      - test -f "${WEBSITE_SOURCE_PATH}/index.html"
+      - test -f "${WEBSITE_SOURCE_PATH}/404.html"
+      - test -d "${WEBSITE_SOURCE_PATH}/assets"
+      - echo "static website validation passed"
+
+  build:
+    commands:
+      - echo "deploying contents of ${WEBSITE_SOURCE_PATH}/ to s3 bucket root"
+      - aws s3 sync "${WEBSITE_SOURCE_PATH}/" "s3://${WEBSITE_BUCKET_NAME}/" --delete
+      - echo "creating cloudfront invalidation"
+      - aws cloudfront create-invalidation --distribution-id "${CLOUDFRONT_DISTRIBUTION_ID}" --paths "/*"
