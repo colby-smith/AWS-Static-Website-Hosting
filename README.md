@@ -4,9 +4,7 @@ A Terraform-managed AWS static website hosting project, used as my own personal 
 
 ## 📘 Overview
 
-This repository provisions and manages a static personal website using Amazon S3, Amazon CloudFront, Route 53, ACM, and CodePipeline/CodeBuild.
-
-The website content is static HTML, CSS, JavaScript, images, and PDFs stored in the `src/` directory. The S3 bucket is private and is served through CloudFront using Origin Access Control. CloudFront serves the site from the private S3 REST endpoint.
+This repository provisions and manages a static personal website using Amazon S3, Amazon CloudFront, Route 53, ACM, and CodePipeline/CodeBuild. The website content is static HTML, CSS, JavaScript, images, and PDFs stored in the `src/` directory. The S3 bucket is private and is served through CloudFront using Origin Access Control. CloudFront serves the site from the private S3 REST endpoint.
 
 ![AWS Static Website Hosting architecture overview](./assets/AWS-Static-Website-Hosting-Overview.png)
 
