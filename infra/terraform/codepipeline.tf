@@ -39,7 +39,7 @@ data "aws_iam_policy_document" "website_content_deploy" {
 }
 
 module "website_content_pipeline" {
-  source = "git::https://github.com/ColbySmith/Terraform-AWS-CodePipeline-Module.git?ref=v1.0.0"
+  source = "git::https://github.com/colby-smith/AWS-CodePipeline-Terraform-Module.git?ref=main"
 
   project_name      = "${var.project_name}-website-content-${var.environment_suffix}"
   artifact_bucket   = aws_s3_bucket.pipeline_artifacts.bucket

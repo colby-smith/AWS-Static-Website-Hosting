@@ -5,7 +5,7 @@ resource "aws_codeconnections_connection" "github" {
   tags = merge(
     local.common_tags,
     {
-      Name = "${var.project_name}-github-connection-${var.environment_suffix}"
+      Name = "${var.project_name}-gh-${var.environment_suffix}"
     }
   )
 }
