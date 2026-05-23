@@ -105,4 +105,14 @@
         max-width: 350px;
         margin: 30px auto;
     }
+
+    .skill-item {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .skill-level {
+        min-width: auto;
+    }
 }
