@@ -1,8 +1,8 @@
 # AWS Static Website Hosting
 
-## 📘 Overview
+A Terraform-managed AWS static website hosting project, used as my own personal portfolio to showcase my skills, experience, certifications and personal projects.
 
-A Terraform-managed AWS static website hosting project.
+## 📘 Overview
 
 This repository provisions and manages a static personal website using Amazon S3, Amazon CloudFront, Route 53, ACM, and CodePipeline/CodeBuild.
 
