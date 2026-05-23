@@ -23,14 +23,6 @@ resource "aws_s3_bucket_ownership_controls" "website" {
   }
 }
 
-resource "aws_s3_bucket_versioning" "website" {
-  bucket = aws_s3_bucket.website.id
-
-  versioning_configuration {
-    status = "Enabled"
-  }
-}
-
 resource "aws_s3_bucket_server_side_encryption_configuration" "website" {
   bucket = aws_s3_bucket.website.id
 

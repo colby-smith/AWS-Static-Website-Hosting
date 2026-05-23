@@ -57,3 +57,8 @@ variable "website_source_path" {
   type        = string
   default     = "src"
 }
+variable "github_connection_arn" {
+  description = "ARN of the existing AWS CodeConnections GitHub connection."
+  type        = string
+  default     = "arn:aws:codeconnections:eu-west-1:897201145212:connection/99fb599a-fbbf-4d5a-8f3e-f4eff84551f6"
+}

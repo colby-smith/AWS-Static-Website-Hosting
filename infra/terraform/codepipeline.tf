@@ -47,7 +47,7 @@ module "website_content_pipeline" {
   source_branch     = var.github_branch
 
   source_provider = "CodeStarSourceConnection"
-  connection_arn  = aws_codeconnections_connection.github.arn
+  connection_arn  = var.github_connection_arn
 
   pipeline_type = "V2"
 
