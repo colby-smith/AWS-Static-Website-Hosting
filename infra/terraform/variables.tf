@@ -1,7 +1,7 @@
 variable "project_name" {
-  description = "Project name for naming infrastructure resources"
-  type      = string
-  default   = "personal-static-website"
+  description = "Project name for naming infrastructure resources."
+  type        = string
+  default     = "personal-static-website"
 }
 
 variable "environment_suffix" {
