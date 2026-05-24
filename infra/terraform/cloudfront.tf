@@ -68,9 +68,12 @@ resource "aws_cloudfront_distribution" "website" {
     minimum_protocol_version = "TLSv1.2_2021"
   }
 
-  tags = {
-    Name = "${var.project_name}-cloudfront-distribution-${var.environment_suffix}"
-  }
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "${var.project_name}-cloudfront-distribution-${var.environment_suffix}"
+    }
+  )
 }
 
 data "aws_cloudfront_cache_policy" "caching_optimized" {

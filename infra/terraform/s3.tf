@@ -1,9 +1,12 @@
 resource "aws_s3_bucket" "website" {
   bucket = "${var.project_name}-s3-bucket-${var.environment_suffix}"
 
-  tags = {
-    Name = "${var.project_name}-s3-bucket-${var.environment_suffix}"
-  }
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "${var.project_name}-s3-bucket-${var.environment_suffix}"
+    }
+  )
 }
 
 resource "aws_s3_bucket_public_access_block" "website" {

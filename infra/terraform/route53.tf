@@ -1,9 +1,12 @@
 resource "aws_route53_zone" "main" {
   name = var.domain_name
 
-  tags = {
-    Name = "${var.project_name}-route53-zone-${var.environment_suffix}"
-  }
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "${var.project_name}-route53-zone-${var.environment_suffix}"
+    }
+  )
 }
 
 resource "aws_route53_record" "root_a" {

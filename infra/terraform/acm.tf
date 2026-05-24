@@ -5,9 +5,12 @@ resource "aws_acm_certificate" "website" {
   subject_alternative_names = [var.www_domain_name]
   validation_method         = "DNS"
 
-  tags = {
-    Name = "${var.project_name}-acm-certificate-${var.environment_suffix}"
-  }
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "${var.project_name}-acm-certificate-${var.environment_suffix}"
+    }
+  )
 
   lifecycle {
     create_before_destroy = true
