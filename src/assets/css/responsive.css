@@ -116,3 +116,21 @@
         min-width: auto;
     }
 }
+@media screen and (max-width: 767px) {
+    .contact-form-box {
+    padding: 32px 22px;
+    border-radius: 14px;
+    }
+
+    .contact-form-head h3 {
+        font-size: 22px;
+    }
+
+    .contact-form-head p {
+        font-size: 14px;
+    }
+
+    .contact-btn {
+        width: 100%;
+    }
+}
