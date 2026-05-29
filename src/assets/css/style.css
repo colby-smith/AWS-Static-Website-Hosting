@@ -714,7 +714,9 @@ border-top: 1px solid #e5ebf2;
 padding: 70px 0;
 }
 
-.contact-card {
+#contact .portfolio-contact-card,
+#contact .contact-form-box,
+#contact .single-contact-box {
 max-width: 760px;
 width: 100%;
 margin: 0 auto;
@@ -727,7 +729,9 @@ position: relative;
 overflow: hidden;
 }
 
-.contact-card::before {
+#contact .portfolio-contact-card::before,
+#contact .contact-form-box::before,
+#contact .single-contact-box::before {
 content: "";
 position: absolute;
 top: 0;
@@ -737,17 +741,24 @@ height: 5px;
 background: linear-gradient(90deg, #b636ff, #d92cf9, #1f2c6c);
 }
 
-.contact-form {
+#contact .portfolio-contact-form,
+#contact .contact-form,
+#contact form {
 width: 100%;
 }
 
-.contact-field {
+#contact .portfolio-contact-field,
+#contact .form-group {
 width: 100%;
 margin-bottom: 18px;
 }
 
-.contact-input,
-.contact-textarea {
+#contact .portfolio-contact-input,
+#contact .portfolio-contact-textarea,
+#contact .form-control,
+#contact input[type="email"],
+#contact input[type="text"],
+#contact textarea {
 display: block;
 width: 100%;
 max-width: 100%;
@@ -764,28 +775,38 @@ outline: none;
 transition: .3s;
 }
 
-.contact-textarea {
+#contact .portfolio-contact-textarea,
+#contact textarea.form-control,
+#contact textarea {
 min-height: 165px;
 resize: vertical;
 }
 
-.contact-input::placeholder,
-.contact-textarea::placeholder {
+#contact .portfolio-contact-input::placeholder,
+#contact .portfolio-contact-textarea::placeholder,
+#contact .form-control::placeholder,
+#contact input::placeholder,
+#contact textarea::placeholder {
 color: #999fb3;
 }
 
-.contact-input:focus,
-.contact-textarea:focus {
+#contact .portfolio-contact-input:focus,
+#contact .portfolio-contact-textarea:focus,
+#contact .form-control:focus,
+#contact input:focus,
+#contact textarea:focus {
 background: #fff;
 border-color: #b636ff;
 box-shadow: 0 8px 22px rgba(182, 54, 255, .12);
 }
 
-.contact-submit {
+#contact .portfolio-contact-submit {
 margin-bottom: 0;
 }
 
-.contact-button {
+#contact .portfolio-contact-button,
+#contact .contact-btn,
+#contact button[type="submit"] {
 display: inline-block;
 width: 210px;
 height: 56px;
@@ -805,14 +826,20 @@ transition: .3s;
 cursor: pointer;
 }
 
-.contact-button:hover,
-.contact-button:focus {
+#contact .portfolio-contact-button:hover,
+#contact .portfolio-contact-button:focus,
+#contact .contact-btn:hover,
+#contact .contact-btn:focus,
+#contact button[type="submit"]:hover,
+#contact button[type="submit"]:focus {
 color: #fff;
 background: #9f00ff;
 border-color: #9f00ff;
 box-shadow: 0 12px 30px rgba(159, 0, 255, .35);
 transform: translateY(-2px);
 }
+
+
 
 .hm-foot-icon {
     padding: 20px 0 0;
