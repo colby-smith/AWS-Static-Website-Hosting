@@ -714,8 +714,11 @@ border-top: 1px solid #e5ebf2;
 padding: 70px 0;
 }
 
-.portfolio-contact-card {
+#contact .portfolio-contact-card,
+#contact .contact-form-box,
+#contact .single-contact-box {
 max-width: 760px;
+width: 100%;
 margin: 0 auto;
 padding: 42px;
 background: #fff;
@@ -726,7 +729,9 @@ position: relative;
 overflow: hidden;
 }
 
-.portfolio-contact-card::before {
+#contact .portfolio-contact-card::before,
+#contact .contact-form-box::before,
+#contact .single-contact-box::before {
 content: "";
 position: absolute;
 top: 0;
@@ -736,38 +741,28 @@ height: 5px;
 background: linear-gradient(90deg, #b636ff, #d92cf9, #1f2c6c);
 }
 
-.portfolio-contact-head {
-margin-bottom: 32px;
-}
-
-.portfolio-contact-head h3 {
-font-size: 26px;
-font-weight: 600;
-color: #3c4258;
-text-transform: none;
-margin-bottom: 10px;
-}
-
-.portfolio-contact-head p {
-max-width: 520px;
-margin: 0 auto;
-color: #999fb3;
-font-size: 15px;
-line-height: 1.8;
-}
-
-.portfolio-contact-form {
+#contact .portfolio-contact-form,
+#contact .contact-form,
+#contact form {
 width: 100%;
 }
 
-.portfolio-contact-field {
+#contact .portfolio-contact-field,
+#contact .form-group {
+width: 100%;
 margin-bottom: 18px;
 }
 
-.portfolio-contact-input,
-.portfolio-contact-textarea {
+#contact .portfolio-contact-input,
+#contact .portfolio-contact-textarea,
+#contact .form-control,
+#contact input[type="email"],
+#contact input[type="text"],
+#contact textarea {
 display: block;
 width: 100%;
+max-width: 100%;
+min-height: 54px;
 padding: 14px 18px;
 border: 1px solid #e5ebf2;
 border-radius: 10px;
@@ -780,32 +775,38 @@ outline: none;
 transition: .3s;
 }
 
-.portfolio-contact-input {
-min-height: 54px;
-}
-
-.portfolio-contact-textarea {
+#contact .portfolio-contact-textarea,
+#contact textarea.form-control,
+#contact textarea {
 min-height: 165px;
 resize: vertical;
 }
 
-.portfolio-contact-input::placeholder,
-.portfolio-contact-textarea::placeholder {
+#contact .portfolio-contact-input::placeholder,
+#contact .portfolio-contact-textarea::placeholder,
+#contact .form-control::placeholder,
+#contact input::placeholder,
+#contact textarea::placeholder {
 color: #999fb3;
 }
 
-.portfolio-contact-input:focus,
-.portfolio-contact-textarea:focus {
+#contact .portfolio-contact-input:focus,
+#contact .portfolio-contact-textarea:focus,
+#contact .form-control:focus,
+#contact input:focus,
+#contact textarea:focus {
 background: #fff;
 border-color: #b636ff;
 box-shadow: 0 8px 22px rgba(182, 54, 255, .12);
 }
 
-.portfolio-contact-submit {
+#contact .portfolio-contact-submit {
 margin-bottom: 0;
 }
 
-.portfolio-contact-button {
+#contact .portfolio-contact-button,
+#contact .contact-btn,
+#contact button[type="submit"] {
 display: inline-block;
 width: 210px;
 height: 56px;
@@ -825,14 +826,19 @@ transition: .3s;
 cursor: pointer;
 }
 
-.portfolio-contact-button:hover,
-.portfolio-contact-button:focus {
+#contact .portfolio-contact-button:hover,
+#contact .portfolio-contact-button:focus,
+#contact .contact-btn:hover,
+#contact .contact-btn:focus,
+#contact button[type="submit"]:hover,
+#contact button[type="submit"]:focus {
 color: #fff;
 background: #9f00ff;
 border-color: #9f00ff;
 box-shadow: 0 12px 30px rgba(159, 0, 255, .35);
 transform: translateY(-2px);
 }
+
 
 
 .hm-foot-icon {
